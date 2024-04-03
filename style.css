@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+.body {
+    flex: 1;
+    display: flex;
+}
+
+.leftmain {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    background-color: green;
+}
+
+.rightmain {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    background-color: grey;
+} 
+
+.top, .middle, .bottom {
+    display: flex;
+    flex: 1;
+}
+
+.middle {
+    background: white;
+}
