@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: NorseFont;
+    src: url(https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf);
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -28,6 +33,21 @@ body {
     background-image: url(./pics/jack-white-t1uQIBwGWKA-unsplash.jpg);
     background-size: cover;
     justify-content: space-between;
+}
+
+.logoarea {
+    margin-top: 40%;
+    height: 15%;
+    display: flex;
+    background:rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.logotext {
+    color: white;
+    font-family: NorseFont;
+    font-size: 4rem;
 }
 
 .photocredit {
