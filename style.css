@@ -36,7 +36,7 @@ body {
 }
 
 .logoarea {
-    margin-top: 40%;
+    margin-top: 30%;
     height: 15%;
     display: flex;
     background:rgba(0, 0, 0, 0.5);
@@ -61,14 +61,27 @@ body {
     display: flex;
     flex-direction: column;
     flex: 6;
-    background-color: grey;
+    background-color: rgb(245, 245, 245);
 } 
 
 .top, .middle, .bottom {
     display: flex;
-    flex: 1;
+    padding: 0 25% 0 5%;
+}
+.top{
+    height: 40%;
+}
+
+.top .text {
+    margin-top: 20%; 
+    font-size: x-large;
 }
 
 .middle {
     background: white;
+    height: 33%;
+}
+
+.bottom {
+    height: 33%;
 }
