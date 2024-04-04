@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 @font-face {
@@ -86,12 +87,30 @@ body {
     padding-bottom: 1%;
 }
 
+.formWrapper {
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+form {
+    display: flex;
+}
+
 label {
     margin-top: 2em;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 0.8lvw;
+
 }
-.left {
+
+input {
+    margin-right: 20%;
+}
+
+.left , .right {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .bottom {
