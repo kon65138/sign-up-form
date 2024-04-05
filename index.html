@@ -22,7 +22,7 @@
             </div>
             <div class="middle">
                 <div class="formWrapper">Let's do this!</div>
-                <form action="example.com" method="post">
+                <form id="form1" action="/" method="post">
                     <div class="left">
                         <div class="inptWrapr">
                             <label for="firstN">FIRST NAME</label>
@@ -58,13 +58,15 @@
 
                         <div class="inptWrapr">
                             <label for="confPassword">CONFIRM PASSWORD</label>
-                            <input type="password" id="confPassword" name="confPassword" required>
+                            <input type="password" id="confPassword" name="confPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                             <span></span>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="bottom"></div>
+            <div class="bottom">
+                <button form="form1" type="submit">submit</button>
+            </div>
         </div>
     </div>
 </body>

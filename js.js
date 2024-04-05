@@ -6,7 +6,7 @@ form.addEventListener('submit', (e) => {
     let msg = document.getElementById("pMatch");
     
     if (password.length != 0) {
-        if (password != confPassword) {
+        if (password.value != confPassword.value) {
             e.preventDefault();
             msg.textContent = "Passwords do not match";
         }
