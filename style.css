@@ -13,7 +13,7 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-input, textarea, select {
+input, textarea, button, select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -169,4 +169,28 @@ input:invalid {
 
 .bottom {
     flex:1;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnWrappr button {
+    display: flex;
+    margin: 2rem 0 2rem;
+    background-color: rgb(134, 158, 236);
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: white;
+}
+
+.alrHvAcc {
+    font-size: 0.9rem;
+}
+
+.alrHvAcc > span {
+    font-weight: 700;
+    color: rgb(134, 158, 236);
 }
