@@ -1,3 +1,15 @@
+/* @link https://utopia.fyi/type/calculator?c=1280,16,1.333,3840,39,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--2: clamp(0.5628rem, 0.1583rem + 0.5056vi, 1.3718rem);
+    --step--1: clamp(0.7502rem, 0.211rem + 0.674vi, 1.8286rem);
+    --step-0: clamp(1rem, 0.2813rem + 0.8984vi, 2.4375rem);
+    --step-1: clamp(1.333rem, 0.3749rem + 1.1976vi, 3.2492rem);
+    --step-2: clamp(1.7769rem, 0.4998rem + 1.5964vi, 4.3312rem);
+    --step-3: clamp(2.3686rem, 0.6662rem + 2.128vi, 5.7734rem);
+    --step-4: clamp(3.1573rem, 0.888rem + 2.8367vi, 7.696rem);
+    --step-5: clamp(4.2087rem, 1.1837rem + 3.7813vi, 10.2588rem);
+  }
 * {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -37,6 +49,8 @@ body {
     display: flex;
     margin: 0;
     height: 100%;
+    min-width: 1280px;
+    min-height: 800px;
 }
 .body {
     flex: 1;
@@ -46,7 +60,7 @@ body {
 .leftmain {
     display: flex;
     flex-direction: column;
-    flex: 4;
+    flex: 3;
     background-image: url(./pics/jack-white-t1uQIBwGWKA-unsplash.jpg);
     background-size: cover;
     justify-content: space-between;
@@ -65,13 +79,13 @@ body {
     display: flex;
     color: white;
     font-family: NorseFont;
-    font-size: 4dvw;
+    font-size: var(--step-5);
 }
 
 .photocredit {
     text-align: center;
     color: rgba(255, 255, 255, 0.616);
-    font-size: small;
+    font-size: var(--step--2);
     margin-bottom: 5px;
 }
 
@@ -86,13 +100,22 @@ body {
     display: flex;
     padding: 0 25% 0 5%;
 }
-.top{
-    flex:0.2;
+.top {
+    flex:1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .top .text {
-    margin: 20vh 0 2vh 0; 
-    font-size: 1.5vw;
+    margin: 0 0 var(--step-1) 0; 
+    font-size: var(--step-0);
+}
+
+.two {
+    font-size: var(--step-0);
+    margin-bottom: var(--step-2);
+    
 }
 
 .middle {
@@ -101,11 +124,13 @@ body {
     flex-direction: column;
     padding-top: 1%;
     padding-bottom: 1%;
+    box-shadow: 4px 3px 5px 1px rgba(66, 66, 66, 0.459);
 }
 
 .formWrapper {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: var(--step-1);
+    margin-bottom: 2rem;
 }
 
 form {
@@ -113,11 +138,15 @@ form {
 }
 
 #pMatch {
+    margin-top: 2px;
+    padding-left: 2px;
+    font-size: 0.8rem;
+    color: red;
     width: 100%;
 }
 
 .inptWrapr {
-    margin-bottom: 1em;
+    margin-bottom: var(--step-1);
     display: flex;
     flex-flow: row wrap;
     margin-right: 20%;
@@ -125,15 +154,22 @@ form {
 
 label {
     font-family: 'Lucida Sans', sans-serif;
-    font-size: 0.8lvw;
+    font-size: var(--step--2);
+    font-weight: bold;
+    color: rgb(95, 95, 95);
     width: 100%;
+    margin-bottom: 2px;
+    padding-left: 2px;
 }
 
 input {
-    height: 3vh;
+    height: var(--step-2);
     appearance: none;
-    border: 1px black solid;
+    border: 1px rgba(0, 0, 0, 0.411) solid;
     width: 100%;
+    border-radius: 5px;;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: var(--step--1);
     
 }
 
@@ -142,7 +178,7 @@ input + span {
 }
   
 input:required + span::after {
-    font-size: 1vw;
+    font-size: var(--step-1);
     position: absolute;
     content: "*";
     color: red;
@@ -151,12 +187,12 @@ input:required + span::after {
   
   
 input:focus {
-    border: 1px solid blue;
-    box-shadow: 0px 0px 10px 0px blue;
+    border: 2px solid blue;
+    box-shadow: 4px 3px 5px 1px rgba(66, 66, 66, 0.459);
 }
 
 input:invalid {
-    border:1px solid red;
+    border:2px solid red;
 }
 
 
@@ -175,19 +211,23 @@ input:invalid {
 
 .btnWrappr button {
     display: flex;
-    margin: 2rem 0 2rem;
+    margin: 3rem 0 3rem;
     background-color: rgb(134, 158, 236);
-    width: 12rem;
-    height: 2.5rem;
+    width: 12vw;
+    min-width: 12vw;
+    height: var(--step-3);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     font-weight: 900;
     color: white;
+    font-size: var(--step--1);
+    box-shadow: 4px 3px 5px 1px rgba(66, 66, 66, 0.459);
 }
 
 .alrHvAcc {
-    font-size: 0.9rem;
+    font-size: var(--step--1);
+    padding-left: 2px;
 }
 
 .alrHvAcc > span {

@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
     if (password.length != 0) {
         if (password.value != confPassword.value) {
             e.preventDefault();
-            msg.textContent = "Passwords do not match";
+            msg.textContent = "*Passwords do not match";
         }
     }
 })
